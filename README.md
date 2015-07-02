@@ -11,5 +11,5 @@
 ![demo图片](./images/demo3.png)
 
 ###### 另外样式再index.html中，没有单独写在一个文件中。
-
+### 我的博客：[JMing依然](http://www.cnblogs.com/jhmydear/)、WP博客[JMing依然](http://ymblog.net)
 
