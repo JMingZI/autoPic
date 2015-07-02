@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery自定义幻灯片插件</title>
+<style type="text/css">
+a {text-decoration:none; color:#282828;}
+a img {border:none;}
+body {font-size:12px; font-family:宋体,arial, helvetica, sans-serif; color:#282828;}
+.img_nav {position: relative; width: 1000px; float: left; height: 356px}
+.big_img a {position: absolute; top: 0px; left: 0px}
+.img_nav img {width: 1000px; height: 356px}
+.link_nav {position: absolute; filter: alpha(opacity=50); width: 1000px; bottom: 0px; background: #000; height: 32px; opacity: 0.5}
+.link_nav a {position: absolute; line-height: 32px; color: #fff; left: 5px}
+.num_nav {position: absolute; bottom: 10px; right:10px}
+.num_nav span { float: left;width: 12px; background: #fff;  height: 12px;border-radius:6px;border:0px #aaa solid;margin-left: 5px;cursor: pointer; }
+.num_nav span.selected { background: #333;}	
+</style>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="autoPic.js"></script>
+</head>
+<body>
+  <div class="img_nav">
+    <div class="big_img">
+      <a href="" target="_blank"><img src="images/1.jpg" /></a>
+      <a href="" target="_blank"><img src="images/2.jpg" /></a>
+      <a href="" target="_blank"><img src="images/3.jpg" /></a>
+    </div>
+    <div class="link_nav">
+      <a href="" target="_blank">这是描述一</a> 
+      <a href="" target="_blank">这是描述二</a> 
+      <a href="" target="_blank">这是描述三</a>
+    </div>
+    <div class="num_nav"></div>
+  </div>
+  <script>
+  $('.img_nav').autoPic({
+    playTime:3000, 
+    picNum:3, 
+    isShowDesc:true, //是否显示描述
+    fadeOutTime:500, //图片隐藏时间
+    fadeInTime:1000 //图片显示时间
+  });
+  </script>
+</body>
+</html>
